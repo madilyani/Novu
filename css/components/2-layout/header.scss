@@ -1,0 +1,49 @@
+// header .... > 
+.header{
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        &-logo{
+            width: 187px;    
+            height: auto;
+            img{
+                @include fullImage;
+            }
+        }
+        &-login{
+            cursor: pointer;
+            color: $black-3;
+            padding: 16px 50px; 
+            font-family: $font_opensans; 
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1;
+            margin-right: 10px; 
+            border: 1px solid $primary;
+            border-radius: 5px;
+            @include transition;
+            &:hover{ opacity: .7; }
+        }
+        &-pro{
+            cursor: pointer;
+            color: $white;
+            padding: 16px 27px; 
+            font-family: $font_opensans;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1;
+            background-color: $secondary;
+            border: 1px solid $secondary;
+            border-radius: 5px;
+            @include transition;
+            &:hover{ opacity: .7; }
+        }
+    }
+}
+// < .... header  
+

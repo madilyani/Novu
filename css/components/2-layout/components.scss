@@ -1,0 +1,171 @@
+// button .... > 
+    .btn--outlinePrimary{
+        
+    }
+// < .... button 
+
+// input__row .... > 
+    .input__row{
+        display: flex;
+        align-items: stretch;
+        background-color: $white;
+        border-radius: 5px;
+        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.11);
+        overflow: hidden;
+
+        .input__outer{
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            width: 30%;
+            padding: 0 15px;
+
+            &:last-child{
+                padding: 0;
+            }
+            &:first-child{
+                width: 40%;
+                &:after{
+                    @include contentAbsolute;
+                    right: 0;
+                    top: 50%;
+                    height: 48%;
+                    border-right: 1px solid $gray-2;
+                    @include transformY;
+                }
+            }
+
+            input{
+                padding: 20px 0;
+                color: $black-3;
+                font-family: $font_opensans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 100%;
+                width: 100%;
+                width: -webkit-fill-available;
+                & + span{
+                    order: -1;
+                    height: 16px;
+                    margin-right: 5px;
+                    padding-bottom: 2px;
+                    color: $gray-1;
+                    svg{
+                        height: 100%;
+                    }
+                }
+                &::placeholder{
+                    color: $gray-1;
+                }
+            }
+            button{
+                cursor: pointer;
+                color: $white;
+                font-family: $font_opensans;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1;
+                width: 100%;
+                height: 100%;
+                background-color: $secondary;
+                &:hover{
+                    background-color: rgba($color: $secondary, $alpha: .7);
+                }
+            }
+        }
+ 
+    }
+// < .... input__row 
+
+
+// guideCard .... > 
+.guideCard{
+    padding: 50px 0;
+    display: flex;
+    width: calc(100%/3 - 32px);
+    margin: 0 16px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $white-3;
+    border-radius: 5px;
+    &__image{
+        height: 140px;
+        margin-bottom: 15px;
+        img{
+            @include fullImage;
+        }
+    }
+    &__title{
+        color: $black-3;
+        font-family: $font_poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 1;
+        span{
+            color: $secondary;
+        }
+    }
+}
+// < .... guideCard 
+
+// commonHeader .... > 
+.commonHeader{
+    position: relative;
+    margin-bottom: 105px;
+    h2{
+        text-align: center;
+        font-family: $font_poppins;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 1;
+    }
+    &:after{
+        @include contentAbsolute;
+        bottom: -36px;
+        left: 50%; 
+        width: 90px;
+        height: 9px;
+        background-color: $secondary;
+        @include transformX;
+    }
+}
+// < .... commonHeader 
+
+// slider .... > 
+.slider{
+    margin: 0 -23px;
+    &__item{
+        margin: 0 23px;
+
+        &-image{
+            @include flex(center, center);
+            box-sizing: border-box;
+            width: 100%;
+            max-height: 235px; 
+            overflow: hidden;
+            border-radius: 5px;
+            border: 2px solid #EEEEEE;
+            img{
+                @include fullImage;
+            }
+        }
+        &-title{
+            color: $black-3;
+            margin-top: 15px;
+            font-family: $font_poppins;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+    }
+}
+// < .... slider 

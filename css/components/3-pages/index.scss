@@ -1,0 +1,345 @@
+// indexLander .... > 
+.indexLander{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        &-tab{
+            width: 50%;
+            padding: 95px 0 160px 0;
+        }   
+        &-banner{
+            position: absolute;
+            right: 0;
+            bottom: -1px;
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+            z-index: -1;
+            img{
+                @include fullImage;
+                object-position: bottom;
+            }
+        }
+    }
+}
+// < .... indexLander  
+
+// landerTab .... > 
+.landerTab{
+    &__navs{
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-bottom: 30px;
+
+        &::after{
+            @include contentAbsolute;
+            top:100%;
+            left: 0;
+            width: 85%;
+            height: 1px;
+            background-color: $gray-2; 
+        }
+    }
+    &__nav{ 
+        cursor: pointer;
+        position: relative;
+        color: $black-3;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1;
+        padding-right: 44px;
+        padding-bottom: 13px;
+        
+        
+        &::after{
+            @include contentAbsolute;
+            top:calc(100%);
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: $primary; 
+            z-index: 1;
+            @include transition;
+            transform-origin: width;
+            
+            
+        }
+
+        &:first-child{
+            &::after{
+                left: unset;
+                right: 0;
+            }
+        }
+        &:hover{
+            color: rgba($color: $black-3, $alpha: .7);
+        }
+        &.active{ 
+            &::after{
+                width: 100%;
+                background-color: $primary; 
+                
+                transition-delay: .1s;
+            }
+        }
+    }
+    &__tabs{
+        
+    }
+    &__tab{
+        display: none;
+
+        &.active{ display: block; }
+        &-title{
+            color: $primary;
+            font-family: $font_poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 53px;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 32px;
+            & span{
+                color: $secondary;
+            }
+        }
+
+    }    
+    
+}
+// < .... landerTab  
+
+
+// guideSection .... > 
+
+.guideSection{
+    position: relative;
+    overflow: hidden;
+    background-color: $primary;
+    padding-bottom: 20px;
+    
+    &::after{
+        @include contentAbsolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+    }
+    &::before{
+        @include contentAbsolute;
+        top: 0;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        background: $gray;
+        transform:  translate(-50%,-80%) rotate(45deg);
+        transform-origin: center center;
+        border: 2px solid #000;
+        z-index: 1;
+    }
+
+    &__inner{
+        
+        display: flex;
+        flex-direction: column;
+        padding: 105px 0 125px;
+        align-items: center;
+
+        &-title{
+            @extend .commonHeader;
+            h2{color: $white;}
+        }
+        &-body{
+            width: 100%;
+            max-width: 1025px;
+            display: flex;
+            justify-content: center;
+
+        }
+    }
+}
+.guideSectionNext{
+    position: relative;    
+    height: 0;
+    background: $primary;
+    margin-bottom: 98px;
+
+    &::after{
+        @include contentAbsolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        z-index: -2;
+    }
+    &::before{
+        @include contentAbsolute;
+        top: 0;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        background: $primary;
+        transform:  translate(-50%,-80%) rotate(45deg);
+        transform-origin: center center;
+        border: 2px solid #000;
+        z-index: -1;
+    }
+
+}
+// < .... guideSection  
+
+// sliderSection .... > 
+.sliderSection{
+    &.sliderSection--light{
+        background-color: $white-3;
+    }
+    &__inner{
+        padding: 60px 45px 100px 45px;
+
+        &-title{
+            @extend .commonHeader;
+            h2{color: $primary;}
+        }
+        &-header{
+            display: flex;
+            align-items:  center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+
+            &-left{
+                display: flex;
+                align-items:  baseline;
+                svg{
+                    color: $black-3;
+                    max-height: 43px;
+                    max-width: 46px;
+                    width: 100%;
+                    height: 100%;
+                }
+                h5{
+                    color: $black-3;
+                    margin-left: 10px;
+                    font-family: $font_poppins;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 100%;
+
+                }
+            }
+            &-right{
+                a{
+                    position: relative;
+                    color: $black-3;
+                    font-family: $font_poppins;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 1;
+                    padding-right: 20px;
+                    &:hover{
+                        opacity: .7;
+                        &::after{ right: -5px; }
+                    }
+
+                    &::after{
+                        @include contentAbsolute;
+                        right: 5px;
+                        top: 50%;
+                        @include transformY;
+                        border-top: 5px solid transparent;
+                        border-bottom: 5px solid transparent;
+                        border-left: 7px solid $black-3;
+                        @include transition;
+                    }
+
+
+                }
+            }
+        }
+        &-body{
+            position: relative;
+            .slick-prev{
+                cursor: pointer;
+                color: $secondary;
+                position: absolute;
+                width: 52px;
+                height: 52px;
+                left: 0;
+                top: 40%;
+                z-index: 1;
+                background: url('../images/icons/left.svg');
+                background-size: cover;
+                transform: translate(-20%,-50%);
+                @include transition;
+
+                &:hover{ 
+                    background: url('../images/icons/left.svg') ;
+                    background-size: cover;
+                    opacity: .7;
+                }
+                &::before{
+                    display: none ;
+                }
+                &.active{
+                    background: url('../images/icons/left.svg') ;
+                    background-size: cover;
+                }
+            }
+            .slick-next{
+                cursor: pointer;
+                color: transparent ;
+                position: absolute;
+                width: 52px;
+                height: 52px;
+                top: 40%;
+                right: 0 ;
+                z-index: 1;
+                transform: translate(20%,-50%);
+                @include transition;
+                background: url('../images/icons/right.svg');
+                background-size: cover;
+
+                &:hover{ 
+                    background: url('../images/icons/right.svg') ;
+                    opacity: .7;
+                    background-size: cover;
+                }
+                &::before{
+                    display: none ;
+                }
+                &.active{
+                    background: url('../images/icons/right.svg') ;
+                    background-size: cover;
+                }
+                
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+// < .... sliderSection  
+
+.footer{
+    background: $primary;
+    &__inner{
+        &-para{
+            text-align: center;
+            color: $white;
+            font-family: $font_opensans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 1;
+            padding: 23px 0;
+        }
+    }
+}

@@ -1,0 +1,693 @@
+
+///////////////////////
+//// max-width: 1180px
+@include xlg-xxlg {
+
+}
+  
+///////////////////////
+////   max-width: 1120px
+@include lg-xlg {
+    // indexLander .... > 
+    .indexLander{
+        &__inner{
+            &-tab{
+                width: 65%;
+            }   
+            &-banner{
+                right: 4%;
+            }
+        }
+    }
+    // < .... indexLander  
+    
+    // guideSection .... > 
+
+    .guideSection{
+        padding-bottom: 0;
+        &__inner{
+            padding: 90px 0 110px 0;
+            &-body{
+                
+                // guideCard .... > 
+                .guideCard{
+                    padding: 40px 0;
+                    &__image{
+                        height: 120px;
+                    }
+                    &__title{
+                        font-size: 22px;
+                    }
+                }
+                // < .... guideCard 
+            }
+        }
+    }
+    // < .... guideSection  
+}
+  
+///////////////////////
+////   max-width: 1024px
+@include md-xxlg {
+    // indexLander .... > 
+    .indexLander{
+        &__inner{
+            &-tab{
+                width: 65%;
+            }   
+            &-banner{
+                right: 4%;
+            }
+        }
+    }
+    // < .... indexLander  
+
+    
+    // commonHeader .... > 
+    .commonHeader{
+        margin-bottom: 80px;
+        h2{
+            font-size: 44px;
+        }
+        &:after{
+            height: 7px;
+        }
+    }
+    // < .... commonHeader 
+        
+    // sliderSection .... > 
+    .sliderSection{
+        &__inner{
+            &-header{
+                margin-bottom: 40px;
+                &-left{
+                    svg{
+                        max-height: 36px;
+                        max-width: 38px;
+                    }
+                    h5{
+                        font-size: 28px;
+                    }
+                }
+            }
+            &-body{
+                .slider{
+                    &__item{
+                        &-image{
+                            // heig
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    // < .... sliderSection  
+    
+    // guideSection .... > 
+
+    .guideSection{
+        &::before{
+            width: 90px;
+            height: 90px;
+        }
+        padding-bottom: 0;
+        &__inner{
+            padding: 90px 0 90px 0;
+            &-body{
+                justify-content:  space-around;
+                // guideCard .... > 
+                .guideCard{
+                    max-width: 200px;
+                    padding: 30px 0;
+                    &__image{
+                        height: 100px;
+                    }
+                    &__title{
+                        font-size: 18px;
+                    }
+                }
+                // < .... guideCard 
+            }
+        }
+    }
+    // < .... guideSection  
+    .guideSectionNext{
+        margin-bottom: 60px;
+        
+        &::before{
+            width: 90px;
+            height: 90px;
+        }
+    }
+    .slider{
+        margin: 0 -15px;
+        &__item{
+            margin: 0 15px;
+        }
+    }
+}
+ 
+///////////////////////
+////   max-width: 980px
+@include md-xlg {
+
+    
+    // commonHeader .... > 
+    .commonHeader{
+        margin-bottom: 60px;
+        h2{
+            font-size: 40px;
+        }
+        &:after{
+            height: 6px;
+        }
+    }
+    // < .... commonHeader 
+
+    // header .... > 
+    .header{
+        &__inner{
+            margin-top: 20px;
+
+            &-logo{
+                width: 150px;    
+            }
+            &-login{
+                padding: 13px 30px; 
+                font-size: 16px;
+            }
+            &-pro{
+                padding: 13px 20px; 
+                font-size: 16px;
+            }
+        }
+    }
+    // < .... header  
+
+
+
+    // indexLander .... > 
+    .indexLander{
+        &__inner{
+            &-tab{
+                width: 70%;
+            }   
+            &-banner{
+                right: 0;
+            }
+        }
+    }
+    // < .... indexLander  
+    
+    // landerTab .... > 
+    .landerTab{
+        &__navs{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &__nav{ 
+            font-size: 18px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+        }
+        &__tab{
+            &-title{
+                font-size: 48px;
+                margin-bottom: 26px;
+            }
+
+        }    
+        
+    }
+    // < .... landerTab  
+    
+    // input__row .... > 
+    .input__row{
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.11);
+
+        .input__outer{
+            padding: 0 12px;
+
+            input{
+                padding: 15px 0;
+                font-size: 15px;
+                & + span{
+                    height: 15px;
+                }
+            }
+            button{
+                font-size: 18px;
+            }
+        }
+
+    }
+    // < .... input__row 
+    
+    // sliderSection .... > 
+    .sliderSection{
+        &__inner{
+            padding: 40px 0 60px 0;
+            &-header{
+                margin-bottom: 25px;
+                &-left{
+                    svg{
+                        max-height: 28px;
+                        max-width: 30px;
+                    }
+                    h5{
+                        font-size: 26px;
+                    }
+                }
+                &-left{
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+            &-body{
+                .slick-next{
+                    width: 40px;
+                    height: 40px;
+                }
+                .slick-prev{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+    // < .... sliderSection  
+}
+
+///////////////////////
+////   max-width: 840px
+@include md-lg {
+
+    .auto__container{
+        padding: 0 30px;
+    }
+
+     // commonHeader .... > 
+    .commonHeader{
+        margin-bottom: 35px;
+        h2{
+            font-size: 32px;
+        }
+        &:after{
+            bottom: -15px;
+            width: 75px;
+            height: 6px;
+        }
+    }
+    // < .... commonHeader 
+
+    // indexLander .... > 
+    .indexLander{
+        &__inner{
+            &-tab{
+                width: 80%;
+                padding: 60px 0 90px;
+            }   
+            &-banner{
+                display: none;
+            }
+        }
+    }
+    // < .... indexLander  
+    
+    // guideSection .... > 
+
+    .guideSection{
+        &::after{
+            height: 1px;
+        }
+        &::before{
+            width: 60px;
+            height: 60px;
+            border: 1px solid #000;
+        }
+
+        &__inner{
+            padding: 70px 0 70px;
+            &-body{
+                
+                // guideCard .... > 
+                .guideCard{
+                    padding: 20px 0;
+                    
+                    &__image{
+                        height: 100px;
+                        margin-bottom: 10px;
+                        img{
+                            @include fullImage;
+                        }
+                    }
+                    &__title{
+                        font-size: 14px;
+                    }
+                }
+                // < .... guideCard 
+            }
+        }
+    }
+    .guideSectionNext{
+        margin-bottom: 60px;
+
+        &::after{
+            height: 1px;
+        }
+        &::before{
+            width: 60px;
+            height: 60px;
+            border: 1px solid #000;
+        }
+
+    }
+    // < .... guideSection  
+    
+
+        
+    // sliderSection .... > 
+    .sliderSection{
+        &__inner{
+            padding-bottom: 45px;
+            &-header{
+                margin-bottom: 15px;
+
+                &-left{
+                    svg{
+                        max-height: 33px;
+                        max-width: 36px;
+                    }
+                    h5{
+                        font-size: 24px;
+                    }
+                }
+                &-right{
+                    a{
+                        font-size: 16px;
+                        line-height: 1;
+                        padding-right: 15px;
+
+                        &::after{
+                            border-top: 3.5px solid transparent;
+                            border-bottom: 3.5px solid transparent;
+                            border-left: 5px solid $black-3;
+                        }
+
+
+                    }
+                }
+            }
+            &-body{
+                .slick-prev{
+                    width: 25px;
+                    height: 25px;
+                }
+                .slick-next{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+    // < .... sliderSection  
+}
+  
+///////////////////////
+////   max-width: 700px
+@include sm-md {
+    // header .... > 
+    .header{
+        &__inner{
+            &-logo{
+                width: 100px;    
+            }
+            &-login{
+                padding: 10px 20px; 
+                font-size: 14px;
+            }
+            &-pro{
+                padding: 10px 20px; 
+                font-size: 14px;
+            }
+        }
+    }
+    // < .... header  
+
+    // indexLander .... > 
+    .indexLander{
+        &__inner{
+            &-tab{
+                width: 100%;
+                padding: 60px 0 70px;
+            }  
+        }
+    }
+    .landerTab{
+        &__nav{
+            font-size: 16px;
+        }
+        &__tab{
+            &-title{
+                max-width: 430px;
+                font-size: 38px;
+            }
+        }
+    }
+    // < .... indexLander  
+    
+    // guideSection .... > 
+
+    .guideSection{
+        &::before{
+            width: 45px;
+            height: 45px;
+        }
+
+        &__inner{
+            padding: 60px 0 60px;
+            &-body{
+                // guideCard .... > 
+                .guideCard{
+                    padding: 10px 3px;
+                    max-width: 130px;
+                    &__image{
+                        height: 80px;
+                        margin-bottom: 10px;
+                        img{
+                            @include fullImage;
+                        }
+                    }
+                    &__title{
+                        font-size: 12px;
+                    }
+                }
+                // < .... guideCard 
+            }
+        }
+    }
+    .guideSectionNext{
+        margin-bottom: 50px;
+
+        &::after{
+            height: 1px;
+        }
+        &::before{
+            width: 45px;
+            height: 45px;
+            border: 1px solid #000;
+        }
+
+    }
+    // < .... guideSection  
+
+    
+    .slider{
+        margin: 0 -10px;
+        &__item{
+            margin: 0 10px;
+    
+            &-image{
+                max-height: unset; 
+            }
+            &-title{
+                font-size: 18px;
+            }
+        }
+    }
+    .slick-prev{display: none !important;}
+    .slick-next{display: none !important;}
+}
+  
+///////////////////////
+////   max-width: 540px
+@include xsm-sm {
+    .commonHeader{
+        h2{
+            font-size: 28px;
+        }
+        &:after{
+            bottom: -14px;
+            width: 60px;
+            height: 4px;
+        }
+    }
+
+
+    // header .... > 
+    .header{
+        &__inner{
+            flex-direction: column;
+            &-logo{
+                margin-top: 50px;
+                width: 120px;   
+                order: 1; 
+            }
+            &-buttons{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            &-login{
+                padding: 6px 10px; 
+                font-size: 14px;
+            }
+            &-pro{
+                padding: 6px 10px; 
+                font-size: 14px;
+            }
+        }
+    }
+    // < .... header  
+    // indexLander .... > 
+    .indexLander{
+        &__inner{
+            &-tab{
+                padding: 25px 0 50px 0;
+            }
+            .landerTab{
+                &__navs{
+                    width: 100%;
+                    &::after{
+                        width: 100%;
+                    }
+                }
+                &__tab{
+                    &-title{
+                        font-size: 34px;
+                    }
+                }
+            }
+        }
+    }
+    // < .... indexLander  
+    
+    // guideSection .... > 
+
+    .guideSection{
+        &::before{
+            width: 30px;
+            height: 30px;
+        }
+
+        &__inner{
+            padding: 40px 0 40px 0;
+            &-body{
+                // guideCard .... > 
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .guideCard{
+                    padding: 20px 3px;
+                    margin: 15px;
+                    width: 160px;
+                    max-width: unset;
+                    &__image{
+                        height: 90px;
+                        margin-bottom: 15px;
+                        img{
+                            @include fullImage;
+                        }
+                    }
+                    &__title{
+                        font-size: 14px;
+                    }
+                }
+                // < .... guideCard 
+            }
+        }
+    }
+    .guideSectionNext{
+        margin-bottom: 40px;
+
+        &::before{
+            width: 30px;
+            height: 30px;
+        }
+
+    }
+    // < .... guideSection  
+    
+    // sliderSection .... > 
+    .sliderSection{
+        &__inner{
+            padding: 30px 0;
+            &-header{
+                margin-bottom: 10px;
+
+                &-left{
+                    svg{
+                        max-height: 24px;
+                        max-width: 26px;
+                    }
+                    h5{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    // < .... sliderSection 
+    
+    .footer{
+        &__inner{
+            &-para{ 
+                padding: 16px 0;
+                font-size: 16px;
+            }
+        }
+    }
+
+    
+    // input__row .... > 
+    .input__row{
+        flex-direction: column;
+
+        .input__outer{
+            width: 100%;
+            padding: 0 15px;
+
+            &:first-child{
+                width: 100%;
+                border-bottom: 1px solid $gray;
+                &:after{
+                    display: none;
+                }
+            }
+
+            input{
+                padding: 10px 0;
+                width: 100%;
+            }
+            button{
+                padding: 10px 0;
+            }
+        }
+
+    }
+    // < .... input__row 
+
+}
+  
